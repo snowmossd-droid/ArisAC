@@ -22,17 +22,13 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      - name: Cache Gradle
-        uses: actions/cache@v4
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
         with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-          key: gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-          restore-keys: gradle-
+          gradle-version: '8.7'
 
       - name: Build
-        run: ./gradlew shadowJar --no-daemon
+        run: gradle shadowJar --no-daemon
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
