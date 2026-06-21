@@ -140,7 +140,7 @@ public class PacketListener extends PacketListenerAbstract {
 
         if (event.getPacketType() == PacketType.Play.Client.PLAYER_DIGGING) {
             var pk = new WrapperPlayClientPlayerDigging(event);
-            if (pk.getAction() == com.github.retrooper.packetevents.protocol.player.DiggingType.SWAP_ITEM_WITH_OFFHAND) {
+            if (pk.getAction() == com.github.retrooper.packetevents.protocol.player.DiggingAction.SWAP_ITEM_WITH_OFFHAND) {
                 autoTotemCheck.onSwapOffhand(player, data);
             }
         }
@@ -167,4 +167,4 @@ public class PacketListener extends PacketListenerAbstract {
         }
         return out;
     }
-}
+    }
