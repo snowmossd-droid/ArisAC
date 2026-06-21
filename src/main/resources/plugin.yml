@@ -1,0 +1,23 @@
+name: ArisAC
+version: '${version}'
+main: dev.aris.arisac.ArisAC
+api-version: '1.21'
+authors: [ ArisDev ]
+description: Anti-cheat for Folia/Paper
+
+commands:
+  arisac:
+    description: ArisAC command
+    usage: /arisac <reload|info|flags>
+    permission: arisac.admin
+
+permissions:
+  arisac.admin:
+    description: Access ArisAC admin commands
+    default: op
+  arisac.alerts:
+    description: Receive cheat alerts
+    default: op
+  arisac.bypass:
+    description: Bypass all checks
+    default: false

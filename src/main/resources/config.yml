@@ -1,0 +1,75 @@
+messages:
+  prefix: "&8[&cArisAC&8] &r"
+  alert: "&8[&cArisAC&8] &f{player} &7flagged &c{check} &8| &7VL: &f{vl} &8| &7Ping: &f{ping}ms"
+  kick-screen: "&cBan bi kick vi gian lan!\n&7Check: &f{check}\n&7Lien he admin de khang cao."
+  ban-screen: "&cBan bi cam {duration} ngay!\n&7Ly do: &fGian lan - {check}\n&7Het han: &f{expiry}\n&7Khang cao: &fdiscord.gg/yourserver"
+  kick-broadcast: "&8[&cArisAC&8] &f{player} &abi kick vi &c{check}&a."
+  ban-broadcast: "&8[&cArisAC&8] &f{player} &abi ban &c{duration} ngay &avi &c{check}&a."
+  reload-success: "{prefix}&aTai lai config thanh cong."
+  no-permission: "{prefix}&cKhong co quyen."
+  flag-info: "{prefix}&f{player} &7co &c{flags} &7flags."
+  spoof-alert: "&8[&cArisAC&8] &f{player} &7bi detect mod &8| &cFlag: {flags} &8| Brand: &f{brand}"
+  spoof-kick: "&cBan bi kick: Phat hien mod khong cho phep.\n&7Lien he admin neu day la nham lam."
+
+punishment:
+  flag1:
+    action: KICK
+  flag2:
+    action: BAN
+    duration-days: 30
+  flag-reset-days: 7
+  broadcast-on-kick: true
+  broadcast-on-ban: true
+
+checks:
+  killaura:
+    enabled: true
+    vl-threshold: 10.0
+    vl-decay-per-tick: 0.5
+    drop-sprint-window-ms: 80
+    grim-mode-window-ms: 15
+    attack-angle-max-degrees: 90.0
+
+  autototem:
+    enabled: true
+    vl-threshold: 1.0
+    sequence-window-ms: 60
+    min-packets-in-window: 3
+
+  reach:
+    enabled: true
+    vl-threshold: 8.0
+    vl-decay-per-tick: 0.8
+    max-distance: 3.1
+    ping-buffer-divisor: 20.0
+    max-ping-buffer: 0.5
+    history-ticks: 40
+
+  aimassist:
+    enabled: true
+    vl-threshold: 12.0
+    vl-decay-per-tick: 1.0
+    min-samples: 60
+    jerk-variance-threshold: 0.0008
+    gcd-error-mean-threshold: 0.0004
+    sensitivity-mismatch-threshold: 0.18
+
+  antispoof:
+    enabled: true
+    action: KICK
+    ban-days: 7
+    kick-score: 60
+    alert-score: 30
+
+discord:
+  enabled: false
+  webhook-url: "YOUR_WEBHOOK_URL_HERE"
+  send-on-join: true
+  send-on-flag: true
+  send-on-kick: true
+  min-score-to-report: 0
+
+alerts:
+  enabled: true
+  permission: arisac.alerts
+  console-log: true

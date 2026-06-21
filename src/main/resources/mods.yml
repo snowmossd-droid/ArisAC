@@ -1,0 +1,226 @@
+instant-kick: true
+check-delay-seconds: 3
+
+zero-channel-detection:
+  enabled: true
+  wait-ms: 4000
+  only-flag-fabric-brand: true
+
+mods:
+
+  meteor-client:
+    display-name: "Meteor Client"
+    action: BAN
+    channels:
+      - "meteor-client:main"
+      - "meteor-client:message"
+    brands:
+      - "meteor-client"
+      - "meteor"
+
+  wurst:
+    display-name: "Wurst Client"
+    action: BAN
+    channels:
+      - "wurst:wurst"
+    brands:
+      - "wurst"
+
+  liquidbounce:
+    display-name: "LiquidBounce"
+    action: BAN
+    channels:
+      - "liquidbounce:main"
+      - "liquidbounce:sign_editor"
+    brands:
+      - "liquidbounce"
+      - "liquidbounce nextgen"
+
+  thunderhack:
+    display-name: "ThunderHack"
+    action: BAN
+    channels: []
+    brands:
+      - "thunderhack"
+      - "thunder"
+      - "ThunderHack"
+
+  vape:
+    display-name: "Vape"
+    action: BAN
+    channels: []
+    brands:
+      - "vape"
+      - "Vape"
+      - "vape v4"
+      - "vape lite"
+
+  sigma:
+    display-name: "Sigma"
+    action: BAN
+    channels:
+      - "sigma:sigma"
+    brands:
+      - "sigma"
+      - "sigma 5"
+      - "sigma 6"
+
+  inertia:
+    display-name: "Inertia Client"
+    action: BAN
+    channels:
+      - "inertia:main"
+    brands:
+      - "inertia"
+
+  rusherhack:
+    display-name: "RusherHack"
+    action: BAN
+    channels:
+      - "rusherhack:plugin_channel"
+    brands:
+      - "rusherhack"
+
+  nodus:
+    display-name: "Nodus"
+    action: BAN
+    channels: []
+    brands:
+      - "nodus"
+
+  aristois:
+    display-name: "Aristois"
+    action: BAN
+    channels:
+      - "aristois:aristois"
+    brands:
+      - "aristois"
+
+  impact:
+    display-name: "Impact Client"
+    action: BAN
+    channels:
+      - "impact:cache"
+    brands:
+      - "impact"
+      - "impact client"
+
+  future:
+    display-name: "Future Client"
+    action: BAN
+    channels: []
+    brands:
+      - "future"
+      - "future client"
+
+  raven:
+    display-name: "Raven B+"
+    action: BAN
+    channels:
+      - "ravenb:ravenb"
+    brands:
+      - "raven"
+      - "raven b"
+
+  salhack:
+    display-name: "SalHack"
+    action: BAN
+    channels:
+      - "salhack:main"
+    brands:
+      - "salhack"
+
+  ares:
+    display-name: "Ares Client"
+    action: BAN
+    channels:
+      - "ares:main"
+    brands:
+      - "ares"
+
+  reflex:
+    display-name: "Reflex"
+    action: BAN
+    channels: []
+    brands:
+      - "reflex"
+      - "reflex client"
+
+  novoline:
+    display-name: "Novoline"
+    action: BAN
+    channels: []
+    brands:
+      - "novoline"
+
+  zfreecam:
+    display-name: "zFreecam"
+    action: KICK
+    channels:
+      - "zfreecam:main"
+      - "zfreecam:channel"
+    brands:
+      - "zfreecam"
+
+  zelfreecam:
+    display-name: "ZelFreecam"
+    action: KICK
+    channels:
+      - "zelfreecam:main"
+    brands:
+      - "zelfreecam"
+
+  freecam-generic:
+    display-name: "Freecam"
+    action: KICK
+    channels:
+      - "freecam:main"
+      - "freecam:network"
+      - "carpet-extra:freecam"
+    brands: []
+
+  baritone:
+    display-name: "Baritone"
+    action: KICK
+    channels:
+      - "baritone:all"
+    brands: []
+
+  journeymap:
+    display-name: "JourneyMap"
+    action: KICK
+    channels:
+      - "journeymap:init"
+      - "jm:init"
+    brands: []
+
+  xaero:
+    display-name: "Xaero Minimap/WorldMap"
+    action: KICK
+    channels:
+      - "xaeroworldmap:main"
+      - "xaerominimap:main"
+    brands: []
+
+  opsec:
+    display-name: "OpSec (Spoof)"
+    action: BAN
+    channels: []
+    brands:
+      - "opsec"
+
+  notenoughupdates:
+    display-name: "NotEnoughUpdates"
+    action: KICK
+    channels:
+      - "neu:general"
+    brands: []
+
+  # Them mod tuy y:
+  # ten-mod:
+  #   display-name: "Ten hien thi"
+  #   action: KICK
+  #   channels:
+  #     - "namespace:ten_channel"
+  #   brands:
+  #     - "brand string"

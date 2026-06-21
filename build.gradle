@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+group = 'dev.aris'
+version = '1.0.0'
+sourceCompatibility = JavaVersion.VERSION_21
+targetCompatibility = JavaVersion.VERSION_21
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.papermc.io/repository/maven-public/' }
+    maven { url 'https://repo.codemc.io/repository/maven-releases/' }
+    maven { url 'https://repo.codemc.io/repository/maven-snapshots/' }
+}
+
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT'
+    implementation 'com.github.retrooper:packetevents-spigot:2.6.0'
+}
+
+shadowJar {
+    relocate 'io.github.retrooper.packetevents', 'dev.aris.arisac.libs.pe'
+    relocate 'com.github.retrooper.packetevents', 'dev.aris.arisac.libs.pe2'
+    minimize()
+    archiveClassifier.set('')
+}
+
+jar { enabled = false }
+build.dependsOn shadowJar
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
